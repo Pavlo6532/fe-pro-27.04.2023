@@ -1,1 +1,3 @@
-# fe-pro-27.04.2023
+# Front-End PRO course 27.04.2023
+
+Hillel shcool
