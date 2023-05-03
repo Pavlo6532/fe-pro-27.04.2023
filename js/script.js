@@ -1,7 +1,24 @@
-let num1 = parseFloat(prompt("Enter first number:"));
-let num2 = parseFloat(prompt("Enter second number:"));
-let num3 = parseFloat(prompt("Enter third number:"));
+let operation = prompt("What do you want to do? (add, sub, mult, div)");
 
-let mean = (num1 + num2 + num3) / 3;
+let operand1 = parseFloat(prompt("Enter first number:"));
+let operand2 = parseFloat(prompt("Enter second number:"));
 
-alert("The arithmetic mean of the three numbers is: " + mean);
+if (operation === "add") {
+  let result = operand1 + operand2;
+  alert(`${operand1} + ${operand2} = ${result}`);
+} else if (operation === "sub") {
+  let result = operand1 - operand2;
+  alert(`${operand1} - ${operand2} = ${result}`);
+} else if (operation === "mult") {
+  let result = operand1 * operand2;
+  alert(`${operand1} * ${operand2} = ${result}`);
+} else if (operation === "div") {
+  if (operand2 === 0) {
+    alert("False: division by zero");
+  } else {
+    let result = operand1 / operand2;
+    alert(`${operand1} / ${operand2} = ${result}`);
+  }
+} else {
+  alert("Error: please select an action");
+}
