@@ -1,24 +1,41 @@
-let operation = prompt("What do you want to do? (add, sub, mult, div)");
+let yearOfBirth = prompt("У якому році ви народились?");
+let city = prompt("У якому місті ви живете?");
+let favoriteSport = prompt("Який ваш улюблений вид спорту?");
 
-let operand1 = parseFloat(prompt("Enter first number:"));
-let operand2 = parseFloat(prompt("Enter second number:"));
+if (yearOfBirth && city && favoriteSport) {
+  let age = new Date().getFullYear() - yearOfBirth;
+  let message = `Ваш вік: ${age}\n`;
 
-if (operation === "add") {
-  let result = operand1 + operand2;
-  alert(`${operand1} + ${operand2} = ${result}`);
-} else if (operation === "sub") {
-  let result = operand1 - operand2;
-  alert(`${operand1} - ${operand2} = ${result}`);
-} else if (operation === "mult") {
-  let result = operand1 * operand2;
-  alert(`${operand1} * ${operand2} = ${result}`);
-} else if (operation === "div") {
-  if (operand2 === 0) {
-    alert("False: division by zero");
+  if (city.toLowerCase() === "київ") {
+    message += "Ти живеш у столиці України.";
+  } else if (city.toLowerCase() === "лондон") {
+    message += "Ти живеш у столиці Великої Британії.";
+  } else if (city.toLowerCase() === "вашингтон") {
+    message += "Ти живеш у столиці США.";
   } else {
-    let result = operand1 / operand2;
-    alert(`${operand1} / ${operand2} = ${result}`);
+    message += `Ти живеш у місті ${city}.`;
   }
+
+  if (favoriteSport.toLowerCase() === "футбол") {
+    message += "\nКруто! Хочеш стати Ліонелом Мессі?";
+  } else if (favoriteSport.toLowerCase() === "теніс") {
+    message += "\nКруто! Хочеш стати Рафаелем Надалем?";
+  } else if (favoriteSport.toLowerCase() === "баскетбол") {
+    message += "\nКруто! Хочеш стати Леброном Джеймсом?";
+  }
+
+  alert(message);
 } else {
-  alert("Error: please select an action");
+  let missingFields = [];
+  if (!yearOfBirth) {
+    missingFields.push("дату народження");
+  }
+  if (!city) {
+    missingFields.push("місто");
+  }
+  if (!favoriteSport) {
+    missingFields.push("вид спорту");
+  }
+
+  alert(`Шкода, що Ви не захотіли ввести свій(ю) ${missingFields.join(", ")}!`);
 }
