@@ -1,7 +1,7 @@
 let length = parseInt(prompt("Enter the length of the array:"));
 let array = [];
 
-for (var i = 0; i < length; i++) {
+for (let i = 0; i < length; i++) {
   let input = prompt("Enter an array element:");
   array.push(input);
 }
