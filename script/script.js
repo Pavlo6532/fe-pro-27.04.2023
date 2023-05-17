@@ -9,14 +9,14 @@ for (let i = 0; i < length; i++) {
 console.log("Initial array:", array);
 
 let numbers = array.filter(function (element) {
-  return !isNaN(parseFloat(element));
+  return !isNaN(+element);
 });
 numbers.sort(function (a, b) {
-  return parseFloat(a) - parseFloat(b);
+  return +a - +b;
 });
 
 let strings = array.filter(function (element) {
-  return isNaN(parseFloat(element));
+  return isNaN(+element);
 });
 strings.sort();
 
