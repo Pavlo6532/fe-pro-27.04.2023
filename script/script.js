@@ -1,13 +1,40 @@
+"use strict";
+
 function redirectToProfile() {
   const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const name = document.getElementById("name").value;
   const password = document.getElementById("password").value;
 
-  if (email.length === 0 || password.length === 0) {
-    alert("Enter required fields: Email and Password.");
+  if (!email || !phone || !name || !password) {
+    alert("Please enter all fields.");
+    return;
+  }
+
+  const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  const phoneRegex = /^[+\d()-]{10,13}$/;
+  const nameRegex = /^[A-Z][a-z]+\s[A-Z][a-z]+\s[A-Z][a-z]+$/;
+
+  if (!emailRegex.test(email)) {
+    alert("Invalid email format.");
+    return;
+  }
+
+  if (!phoneRegex.test(phone)) {
+    alert("Invalid phone number format.");
+    return;
+  }
+
+  if (!nameRegex.test(name)) {
+    alert(
+      "Invalid name format. Enter three words with the first letter capitalized."
+    );
     return;
   }
 
   console.log("Email:", email);
+  console.log("Phone:", phone);
+  console.log("Name:", name);
   console.log("Password:", password);
 
   const loader = document.getElementById("loader");
