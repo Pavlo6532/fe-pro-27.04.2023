@@ -1,5 +1,9 @@
 "use strict";
 
+const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+const phoneRegex = /^[+\d()-]{10,13}$/;
+const nameRegex = /^[A-Z][a-z]+\s[A-Z][a-z]+\s[A-Z][a-z]+$/;
+
 function redirectToProfile() {
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
@@ -10,10 +14,6 @@ function redirectToProfile() {
     alert("Please enter all fields.");
     return;
   }
-
-  const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-  const phoneRegex = /^[+\d()-]{10,13}$/;
-  const nameRegex = /^[A-Z][a-z]+\s[A-Z][a-z]+\s[A-Z][a-z]+$/;
 
   if (!emailRegex.test(email)) {
     alert("Invalid email format.");
