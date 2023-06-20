@@ -1,0 +1,14 @@
+{
+  "name": "fe-pro-27.04.2023",
+  "version": "1.0.0",
+  "description": "Hillel shcool",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

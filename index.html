@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic template</title>
+    <title>jQuery</title>
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -21,12 +21,8 @@
     <main class="main">
         <section class="first-section py-rem">
             <div class="container">
-                <h1>First section</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ab, iure ipsa aliquam porro totam molestias.
-                </p>
-                <img src="./images/nature.png" alt="nature" width="300">
+                <h1>Modal window jQuery</h1>
+                <button class="btn modal">click me</button>
             </div>
         </section>
     </main>
@@ -34,7 +30,14 @@
         <div class="container">
             <p>&copy; All rights are reserved</p>
         </div>
+        <div class="modal-wrapper">
+            <div class="modal-window">
+                <span class="close">&times;</span>
+                <h3 class="title_h1 py-rem">Modal window jQuery</h3>
+            </div>
+        </div>
     </footer>
+    <script src="./script/jquery-3.6.4.js"></script>
     <script src="./script/script.js"></script>
 </body>
 
