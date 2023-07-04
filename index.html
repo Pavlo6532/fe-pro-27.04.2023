@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic template</title>
+    <title>Search post</title>
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -21,12 +21,16 @@
     <main class="main">
         <section class="first-section py-rem">
             <div class="container">
-                <h1>First section</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ab, iure ipsa aliquam porro totam molestias.
-                </p>
-                <img src="./images/nature.png" alt="nature" width="300">
+                <h1>Search post by ID</h1>
+                <label for="postIdInput">Post ID (from 1 to 100):</label>
+                <input type="text" id="postIdInput">
+                <button id="searchButton">Find a post</button>
+
+                <div id="postContainer"></div>
+
+                <h2>Comments:</h2>
+                <button id="getCommentsButton">Get comments</button>
+                <div id="commentsContainer"></div>
             </div>
         </section>
     </main>

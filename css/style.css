@@ -4,3 +4,60 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#postIdInput {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#postContainer {
+  margin-top: 20px;
+}
+
+#commentsContainer {
+  margin-top: 20px;
+}
+
+#commentsContainer h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#commentsContainer div {
+  margin-bottom: 10px;
+}
+
+#commentsContainer p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #666;
+}
+
+#postContainer p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #666;
+}
+
+#commentsContainer strong {
+  font-weight: bold;
+}
