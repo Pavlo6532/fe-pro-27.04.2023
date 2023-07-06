@@ -90,20 +90,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function clearPostAndComments() {
-    const postContainer = document.getElementById("postContainer");
-    const commentsContainer = document.getElementById("commentsContainer");
-    while (postContainer.firstChild) {
-      postContainer.firstChild.remove();
-    }
-    while (commentsContainer.firstChild) {
-      commentsContainer.firstChild.remove();
-    }
+    clearElementChildren(postContainer);
+    clearElementChildren(commentsContainer);
   }
 
   function clearComments() {
-    const commentsContainer = document.getElementById("commentsContainer");
-    while (commentsContainer.firstChild) {
-      commentsContainer.firstChild.remove();
+    clearElementChildren(commentsContainer);
+  }
+
+  function clearElementChildren(element) {
+    while (element.firstChild) {
+      element.firstChild.remove();
     }
   }
 });
