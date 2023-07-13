@@ -13,7 +13,7 @@ function createIterator() {
         return { value: count, done: false };
       } else {
         console.log("finish");
-        return { done: true };
+        return { value: undefined, done: true };
       }
     },
   };
@@ -22,6 +22,7 @@ function createIterator() {
 }
 
 const iterator = createIterator();
+console.log(iterator.next().value);
 console.log(iterator.next().value);
 console.log(iterator.next().value);
 console.log(iterator.next().value);
