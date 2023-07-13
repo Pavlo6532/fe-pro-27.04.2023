@@ -11,10 +11,11 @@ function createIterator() {
       }
       if (count <= 3) {
         return { value: count, done: false };
-      } else {
-        console.log("finish");
-        return { value: undefined, done: true };
       }
+      if (count === 4) {
+        console.log("finish");
+      }
+      return { value: undefined, done: true };
     },
   };
 
