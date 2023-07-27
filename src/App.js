@@ -1,6 +1,6 @@
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-import Container from "./Container";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Container from "./components/Container";
 import "./App.css";
 
 const App = () => {
